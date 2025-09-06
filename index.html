@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sri Haashini Engineering Works</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Book Antiqua;
+            box-sizing: border-box;
+        }
+
+        body,html{
+            line-height: 1.6;
+             margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; 
+        }
+        
+        .headii {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .headii h1 {
+            font-size: 1.5rem;
+        }
+
+        .headii .nav-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 10px 0;
+            transition: transform 0.3s ease-in-out;
+            transform: translateY(-100%);
+            z-index: 10;
+        }
+
+        .headii.active .nav-menu {
+            display: flex;
+            transform: translateY(0);
+        }
+
+        .nav-menu ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .nav-menu li {
+            margin: 15px 0;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            display: block;
+        }
+
+        .nav-menu a:hover {
+            color: grey;
+            background-color: #333;
+        }
+
+        .toggle-button {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            padding: 5px;
+        }
+
+        .toggle-button .bar {
+            height: 3px;
+            width: 100%;
+            background-color: white;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .headii.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .headii.active .bar:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .headii.active .bar:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .box {
+            border: 2px solid black;
+            margin: 5px;
+            width: 100%;
+        }
+
+        .im1 {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .about, .contact, .follow {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        h2, h1 {
+            margin-bottom: 10px;
+        }
+
+        .about p, .contact h3 ,a{
+            font-family: Book Antiqua;
+            color: black;
+            text-align: justify;
+        }
+        .contact a:hover{
+            color:#333;
+        }
+
+        .prod {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 5px;
+        }
+
+        .prod div {
+            flex: 1 1 200px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .prod img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        
+        /* Centering the contact section 
+        .contact {
+            text-align: center;
+        }
+        */
+        .contact h3 {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .img1 {
+            width: 30px;
+            height: auto;
+            vertical-align: top;
+            display: inline-block;
+                
+    width:30px;
+    margin:5px; 
+            
+        }
+
+        .follow {
+            background-color: black;
+            color: white;
+            /* text-align: center; */
+            padding: 60px;
+        }
+
+        .follow a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .follow a:hover {
+            color: grey;
+        }
+        
+        /* ALIGN HEADINGS TO THE LEFT */
+        h2 {
+            text-align: left;
+            margin-left: 10px;
+            text-decoration: underline;
+
+        }
+        
+        /* MEDIA QUERIES FOR LARGER SCREENS */
+        @media (min-width: 768px) {
+            .toggle-button {
+                display: none;
+            }
+
+            .headii h1 {
+                font-size: 2rem;
+            }
+
+            .headii .nav-menu {
+                display: block;
+                position: static;
+                width: auto;
+                background-color: transparent;
+                transform: none;
+            }
+
+            .nav-menu ul {
+                display: flex;
+            }
+
+            .nav-menu li {
+                margin: 0 15px;
+            }
+
+            .nav-menu a {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="headii" id="he">
+        <h1>Sri Haashini Engineering Works</h1>
+        <div class="toggle-button" id="toggleButton">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="#he">Home</a></li>
+                <li><a href="#cont">Contact</a></li>
+                <li><a href="#ab">About</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="box">
+        <img class="im1" src="civil2.png">
+    </div>
+    <div class="about" id="ab">
+        <h2>About Us</h2>
+        <p>This company is basically steel fabrication company. Having sound knowledge on structure and equipment work for all cement, activated carbon, power, sugar and chemical plant works. We have lot of sound knowledge in fabrication field. Our company staffs and technical labours and workers. We have sufficient man power and machinery with us. Our company is well-equipped with state-of-the-art machinery and possesses the necessary manpower to undertake projects of varying scales and complexities. We are committed to delivering high-quality, timely, and cost-effective solutions that meet the unique requirements of our clients.</p>
+    </div>
+    <br><br>
+    <h2 style="margin-left: 5px;">Our Projects</h2><br><br>
+    <div class="prod">
+        <div><img src="img1.jfif"></div>
+        <div><img src="img2.jfif"></div>
+        <div><img src="img3.jfif"></div>
+        <div><img src="img4.jfif"></div>
+        <div><img src="img5.jfif"></div>
+        <div><img src="img6.jfif"></div>
+    </div>
+    <div class="contact" id="cont">
+        <h2>Contact</h2><br><br>
+        <img class="img1" src="loc.png">
+        <h3 class="h3t">5/46 E-21, Amman Nagar, 3rd Street<br>Samathaanapuram, Thoothukudi- 628005</h3><br><br>
+        <img class="img1" src="call.png">
+        <h3 class="h3t">97939 xxxxx<br>43429 xxxxx<br></h3><br><br>
+        <img class="img1" src="mail.png">
+        <h3 class="h3t"><a class="a1" href="https://mail.google.com/mail/u/0/#inbox?">rishiengineering@gmail.com</a></h3>
+    </div>
+    <div class="follow">
+        <h2>Follow Us</h2><br><br>
+        <h3><a href="https://www.facebook.com/">Facebook</a> | <a href="https://www.youtube.com/">Youtube</a> | <a href="https://www.instagram.com/">Instagram</a></h3>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggleButton = document.getElementById('toggleButton');
+            const headii = document.getElementById('he');
+            const navLinks = document.querySelectorAll('.nav-menu a');
+
+            if (toggleButton && headii) {
+                toggleButton.addEventListener('click', () => {
+                    headii.classList.toggle('active');
+                });
+            } else {
+                console.error("Navigation elements not found.");
+            }
+
+            // Close the menu when a link is clicked (for mobile)
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    headii.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
